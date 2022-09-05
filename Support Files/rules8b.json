@@ -1,0 +1,14 @@
+{
+  "rules": {
+
+    ".read" : "auth != null",
+
+    "issues": {
+     "$id" : {
+      ".write": "newData.val() != null && auth != null || newData.val() == null && root.child('users').child(auth.uid).child('role').val() == 'manager'",
+
+        ".validate" : "newData.hasChildren(['description', 'severity', 'resolved'])"
+     }
+    }
+  }
+}

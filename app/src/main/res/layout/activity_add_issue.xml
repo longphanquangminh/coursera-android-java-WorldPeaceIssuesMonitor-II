@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:onClick="addIssueButtonClicked">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true">
+
+        <TextView
+            android:id="@+id/severityTitleLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:text="Severity"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/severitySeekBar"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/severityTitleLabel"
+            android:layout_marginStart="50dip"
+            android:layout_marginTop="5dip"
+            android:layout_marginEnd="50dip"
+            android:layout_marginBottom="5dip"
+            android:max="2"
+            android:progress="1" />
+
+        <ImageView
+            android:id="@+id/minorImageView"
+            android:layout_width="25dip"
+            android:layout_height="25dip"
+            android:layout_below="@+id/severitySeekBar"
+            android:layout_alignStart="@id/severitySeekBar"
+            android:layout_marginStart="3dip"
+            android:src="@drawable/yellow_led" />
+
+        <ImageView
+            android:id="@+id/moderateImageView"
+            android:layout_width="25dip"
+            android:layout_height="25dip"
+            android:layout_below="@+id/severitySeekBar"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/orange_led" />
+
+        <ImageView
+            android:id="@+id/majorImageView"
+            android:layout_width="25dip"
+            android:layout_height="25dip"
+            android:layout_below="@+id/severitySeekBar"
+            android:layout_alignEnd="@id/severitySeekBar"
+            android:layout_marginEnd="3dip"
+            android:src="@drawable/red_led" />
+
+
+        <TextView
+            android:id="@+id/minorLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/minorImageView"
+            android:layout_alignStart="@+id/severitySeekBar"
+            android:text="Minor" />
+
+        <TextView
+            android:id="@+id/moderateLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/moderateImageView"
+            android:layout_centerHorizontal="true"
+
+            android:text="Moderate" />
+
+        <TextView
+            android:id="@+id/majorLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/majorImageView"
+            android:layout_alignEnd="@+id/severitySeekBar"
+            android:layout_marginStart="-50dp"
+            android:text="Major" />
+
+        <TextView
+            android:id="@+id/resolvedTitleLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/moderateLabel"
+            android:layout_marginTop="20dip"
+            android:text="Resolved?"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/resolvedSeekBar"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/resolvedTitleLabel"
+            android:layout_marginStart="100dip"
+            android:layout_marginTop="5dip"
+            android:layout_marginEnd="100dip"
+            android:layout_marginBottom="5dip"
+            android:max="1"
+            android:progress="0" />
+
+        <ImageView
+            android:id="@+id/notResolvedImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/resolvedSeekBar"
+            android:layout_alignStart="@id/resolvedSeekBar"
+            android:layout_marginStart="0dip"
+            android:src="@drawable/red_hourglass" />
+
+        <ImageView
+            android:id="@+id/resolvedImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/resolvedSeekBar"
+            android:layout_alignEnd="@id/resolvedSeekBar"
+            android:layout_marginStart="3dip"
+            android:src="@drawable/green_check_mark" />
+
+        <TextView
+            android:id="@+id/notResolvedLabel"
+            android:layout_width="30dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/notResolvedImageView"
+            android:layout_alignStart="@+id/resolvedSeekBar"
+            android:text="No"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/resolvedLabel"
+            android:layout_width="30dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/notResolvedImageView"
+            android:layout_alignEnd="@+id/resolvedSeekBar"
+            android:text="Yes"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/descriptionTitleLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/resolvedLabel"
+            android:layout_marginTop="15dip"
+            android:text="Description"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/descriptionEditText"
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:layout_below="@id/descriptionTitleLabel"
+            android:layout_marginStart="50dip"
+            android:layout_marginEnd="50dip"
+            android:ems="10"
+            android:hint="description"
+            android:inputType="text" />
+
+        <Button
+            android:layout_width="200dip"
+            android:layout_height="50dip"
+            android:layout_below="@id/descriptionEditText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dip"
+            android:layout_marginBottom="20dip"
+            android:backgroundTint="@color/colorAccent"
+            android:onClick="addIssueButtonClicked"
+            android:text="Add Issue"
+            android:textColor="@color/colorPrimaryLight"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+</ScrollView>

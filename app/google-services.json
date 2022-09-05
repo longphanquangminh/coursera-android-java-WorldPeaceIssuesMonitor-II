@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "512552014980",
+    "firebase_url": "https://phan-quang-minh-long-default-rtdb.firebaseio.com",
+    "project_id": "phan-quang-minh-long",
+    "storage_bucket": "phan-quang-minh-long.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:512552014980:android:9de26ca823692448709ed1",
+        "android_client_info": {
+          "package_name": "com.phanquangminhlong.worldpeaceissuesmonitor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "512552014980-n9jaj7iahvsuh5sfk80gph788fna1e29.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9yH5ddQya5n6sVifFziEsNBNtPioZLCE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "512552014980-n9jaj7iahvsuh5sfk80gph788fna1e29.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
